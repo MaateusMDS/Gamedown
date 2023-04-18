@@ -1,5 +1,8 @@
 package com.gamedown.jogo.model;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Requisitos {
 
     private String sistemaOperacional;
