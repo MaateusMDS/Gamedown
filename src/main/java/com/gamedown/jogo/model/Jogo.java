@@ -27,7 +27,6 @@ public class Jogo {
     public Jogo(){}
 
     public Jogo(InserirJogo dados) {
-        this.id = dados.id();
         this.titulo = dados.titulo();
         this.desenvolvedora = dados.desenvolvedora();
         this.distribuidora = dados.distribuidora();

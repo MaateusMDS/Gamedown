@@ -6,7 +6,7 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class Requisitos {
 
-    private String sistema;
+    private String sistemaOperacional;
     private String processador;
     private String memoria;
     private String placaDeVideo;
@@ -16,15 +16,15 @@ public class Requisitos {
     }
 
     public Requisitos(DadosRequisitos dados) {
-        this.sistema = dados.sistema();
+        this.sistemaOperacional = dados.sistemaOperacional();
         this.processador = dados.processador();
         this.memoria = dados. memoria();
         this.placaDeVideo = dados.placaDeVideo();
         this.armazenamento = dados.armazenamento();
     }
 
-    public Requisitos(String sistema, String processador, String memoria, String placaDeVideo, int armazenamento) {
-        this.sistema = sistema;
+    public Requisitos(String sistemaOperacional, String processador, String memoria, String placaDeVideo, int armazenamento) {
+        this.sistemaOperacional = sistemaOperacional;
         this.processador = processador;
         this.memoria = memoria;
         this.placaDeVideo = placaDeVideo;
@@ -32,11 +32,11 @@ public class Requisitos {
     }
 
     public String getSistemaOperacional() {
-        return sistema;
+        return sistemaOperacional;
     }
 
-    public Requisitos setSistemaOperacional(String sistema) {
-        this.sistema = sistema;
+    public Requisitos setSistemaOperacional(String sistemaOperacional) {
+        this.sistemaOperacional = sistemaOperacional;
         return this;
     }
 
