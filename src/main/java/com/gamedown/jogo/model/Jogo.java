@@ -1,11 +1,12 @@
 package com.gamedown.jogo.model;
 
+import com.gamedown.jogo.dados.DadosRequisitos;
 import com.gamedown.jogo.dados.InserirJogo;
 import jakarta.persistence.*;
 
 import java.time.Year;
 
-@Entity(name = "Gamedown")
+@Entity(name = "gamedown")
 @Table(name = "TB_GMD_JOGO")
 public class Jogo {
 
@@ -34,7 +35,7 @@ public class Jogo {
         this.numJogadores = dados.numJogadores();
         this.dataLancamento = dados.dataLancamento();
         this.genero = dados.genero();
-        this.requisitos = dados.requisitos();
+        this.requisitos = new Requisitos(dados.requisitos());
     }
 
 

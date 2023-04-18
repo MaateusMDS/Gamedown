@@ -18,7 +18,7 @@ public record InserirJogo(
      int numJogadores,
      Year dataLancamento,
      Genero genero,
-     Requisitos requisitos
+     DadosRequisitos requisitos
 
     ){
 }

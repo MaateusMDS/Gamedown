@@ -1,23 +1,42 @@
 package com.gamedown.jogo.model;
 
+import com.gamedown.jogo.dados.DadosRequisitos;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Requisitos {
 
-    private String sistemaOperacional;
+    private String sistema;
     private String processador;
     private String memoria;
     private String placaDeVideo;
     private int armazenamento;
 
-
-    public String getSistemaOperacional() {
-        return sistemaOperacional;
+    public Requisitos() {
     }
 
-    public Requisitos setSistemaOperacional(String sistemaOperacional) {
-        this.sistemaOperacional = sistemaOperacional;
+    public Requisitos(DadosRequisitos dados) {
+        this.sistema = dados.sistema();
+        this.processador = dados.processador();
+        this.memoria = dados. memoria();
+        this.placaDeVideo = dados.placaDeVideo();
+        this.armazenamento = dados.armazenamento();
+    }
+
+    public Requisitos(String sistema, String processador, String memoria, String placaDeVideo, int armazenamento) {
+        this.sistema = sistema;
+        this.processador = processador;
+        this.memoria = memoria;
+        this.placaDeVideo = placaDeVideo;
+        this.armazenamento = armazenamento;
+    }
+
+    public String getSistemaOperacional() {
+        return sistema;
+    }
+
+    public Requisitos setSistemaOperacional(String sistema) {
+        this.sistema = sistema;
         return this;
     }
 
