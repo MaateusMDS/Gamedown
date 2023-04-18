@@ -19,7 +19,7 @@ public record InserirJogo(
         String idiomas,
         @NotNull @Min(1) @Max(4)
         int numJogadores,
-        @NotNull @Past @Future
+        @NotNull @PastOrPresent
         Year dataLancamento,
         @NotNull
         Genero genero,

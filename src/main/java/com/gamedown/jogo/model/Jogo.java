@@ -35,6 +35,11 @@ public class Jogo {
         this.dataLancamento = dados.dataLancamento();
         this.genero = dados.genero();
         this.requisitos = new Requisitos(dados.requisitos());
+        this.visivel = true;
+    }
+
+    public void apagarJogo(){
+        this.visivel = false;
     }
 
 

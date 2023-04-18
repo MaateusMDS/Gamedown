@@ -1,5 +1,6 @@
 package com.gamedown.jogo.dados;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -12,6 +13,6 @@ public record DadosRequisitos(
      String memoria,
      @NotBlank
      String placaDeVideo,
-     @NotNull
+     @NotNull @Min(1)
      int armazenamento
     ){ }
