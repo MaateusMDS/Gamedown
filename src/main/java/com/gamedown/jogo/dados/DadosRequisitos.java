@@ -14,5 +14,5 @@ public record DadosRequisitos(
      @NotBlank
      String placaDeVideo,
      @NotNull @Min(1)
-     int armazenamento
+     Integer armazenamento
     ){ }

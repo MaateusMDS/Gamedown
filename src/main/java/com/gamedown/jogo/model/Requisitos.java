@@ -1,5 +1,6 @@
 package com.gamedown.jogo.model;
 
+import com.gamedown.jogo.dados.AtualizarJogo;
 import com.gamedown.jogo.dados.DadosRequisitos;
 import jakarta.persistence.Embeddable;
 
@@ -21,6 +22,24 @@ public class Requisitos {
         this.memoria = dados. memoria();
         this.placaDeVideo = dados.placaDeVideo();
         this.armazenamento = dados.armazenamento();
+    }
+
+    public void atualizarJogo(DadosRequisitos dados) {
+        if (dados.armazenamento() != null) {
+            this.armazenamento = dados.armazenamento();
+        }
+        if (dados.memoria() != null) {
+            this.memoria = dados.memoria();
+        }
+        if (dados.sistemaOperacional() != null) {
+            this.sistemaOperacional = dados.sistemaOperacional();
+        }
+        if (dados.placaDeVideo() != null) {
+            this.placaDeVideo = dados.placaDeVideo();
+        }
+        if (dados.processador() != null) {
+            this.processador = dados.processador();
+        }
     }
 
     public Requisitos(String sistemaOperacional, String processador, String memoria, String placaDeVideo, int armazenamento) {

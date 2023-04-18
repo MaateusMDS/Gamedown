@@ -1,5 +1,6 @@
 package com.gamedown.jogo.model;
 
+import com.gamedown.jogo.dados.AtualizarJogo;
 import com.gamedown.jogo.dados.DadosRequisitos;
 import com.gamedown.jogo.dados.InserirJogo;
 import jakarta.persistence.*;
@@ -40,6 +41,34 @@ public class Jogo {
 
     public void apagarJogo(){
         this.visivel = false;
+    }
+
+    public void atualizarJogo(AtualizarJogo dados) {
+        if (dados.titulo() != null) {
+            this.titulo = dados.titulo();
+        }
+        if (dados.desenvolvedora() != null) {
+            this.desenvolvedora = dados.desenvolvedora();
+        }
+        if (dados.distribuidora() != null) {
+            this.distribuidora = dados.distribuidora();
+        }
+        if (dados.idiomas() != null) {
+            this.idiomas = dados.idiomas();
+        }
+        if (dados.numJogadores() != null) {
+            this.numJogadores = dados.numJogadores();
+        }
+        if (dados.dataLancamento() != null) {
+            this.dataLancamento = dados.dataLancamento();
+        }
+        if (dados.genero() != null) {
+            this.genero = dados.genero();
+        }
+        if (dados.requisitos() != null) {
+            this.requisitos.atualizarJogo(dados.requisitos());
+        }
+
     }
 
 

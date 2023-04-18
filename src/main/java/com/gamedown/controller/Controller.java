@@ -1,5 +1,6 @@
 package com.gamedown.controller;
 
+import com.gamedown.jogo.dados.AtualizarJogo;
 import com.gamedown.jogo.dados.InserirJogo;
 import com.gamedown.jogo.dados.ListarJogos;
 import com.gamedown.jogo.model.Jogo;
@@ -23,11 +24,18 @@ public class Controller {
     @Transactional
     public void save(@RequestBody @Valid InserirJogo dados){
         repo.save(new Jogo(dados));
+    }
 
+    @PutMapping("/{id}")
+    @Transactional
+    public void put(@PathVariable Long id, @RequestBody @Valid AtualizarJogo dados) {
+        var jogo = new Jogo();
+        jogo = repo.getReferenceById(id);
+        jogo.atualizarJogo(dados);
     }
 
     @GetMapping
-    public Page<ListarJogos> findAll(@PageableDefault(size = 3, sort = {"titulo"})Pageable pageable) {
+    public Page<ListarJogos> findAll(@PageableDefault(size = 5, sort = {"titulo"})Pageable pageable) {
         return repo.findAllByVisivelTrue(pageable).map(ListarJogos::new);
     }
 
