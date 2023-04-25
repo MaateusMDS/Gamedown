@@ -12,7 +12,7 @@
 	<artifactId>gamedown</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gamedown</name>
-	<description>APi Rest de um cátalogo de jogos</description>
+	<description>API Rest de um cátalogo de jogos</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

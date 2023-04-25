@@ -1,3 +1,8 @@
+/*
+Mateus Mendes - RM95138
+Eduardo Kenji - RM94180
+ */
+
 package com.gamedown.jogo.model;
 
 import com.gamedown.jogo.dados.AtualizarJogo;

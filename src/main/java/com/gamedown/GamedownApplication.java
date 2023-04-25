@@ -1,3 +1,8 @@
+/*
+Mateus Mendes - RM95138
+Eduardo Kenji - RM94180
+ */
+
 package com.gamedown;
 
 import org.springframework.boot.SpringApplication;
