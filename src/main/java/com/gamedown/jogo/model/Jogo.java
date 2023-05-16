@@ -23,7 +23,7 @@ public class Jogo {
     private String distribuidora;
     private String idiomas;
     private int numJogadores;
-    private Year dataLancamento;
+    private int dataLancamento;
     @Enumerated(EnumType.STRING)
     private Genero genero;
     @Embedded
@@ -131,11 +131,11 @@ public class Jogo {
         return this;
     }
 
-    public Year getDataLancamento() {
+    public int getDataLancamento() {
         return dataLancamento;
     }
 
-    public Jogo setDataLancamento(Year dataLancamento) {
+    public Jogo setDataLancamento(int dataLancamento) {
         this.dataLancamento = dataLancamento;
         return this;
     }

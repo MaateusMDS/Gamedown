@@ -17,8 +17,8 @@ public record AtualizarJogo(
         String idiomas,
         @Min(1) @Max(4)
         Integer numJogadores,
-        @PastOrPresent
-        Year dataLancamento,
+        @Min(1000)
+        Integer dataLancamento,
         Genero genero,
         DadosRequisitos requisitos
 ) {
